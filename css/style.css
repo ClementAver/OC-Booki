@@ -1,1 +1,298 @@
+:root {
+  /*main color*/
+  --colorOne: #0065fc;
+  /*secondary color*/
+  --background: #f2f2f2;
+  /*hover*/
+  --hover: #deebff;
+}
 
+/*| reset -start |*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+button,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+input,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+  list-style-type: none;
+  color: black;
+  font-family: raleway, sans-serif;
+}
+/*| reset -end |*/
+
+body {
+  width: 100%;
+  max-width: 1340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1,
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 25.83px;
+  margin-bottom: 5px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18.78px;
+}
+
+.font-18 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.13px;
+}
+
+p {
+  line-height: 18.78px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  line-height: 18.78px;
+}
+
+:focus {
+  outline: 0;
+}
+
+::placeholder {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.13px;
+  opacity: 1;
+}
+
+::-webkit-input-placeholder {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.13px;
+  opacity: 1;
+  color: black;
+}
+
+/*header -s*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 60px;
+  margin-bottom: 70px;
+}
+
+#logo {
+  width: 61px;
+  object-fit: contain;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li a {
+  border-top: 2px solid rgba(0, 0, 0, 0);
+  position: relative;
+  bottom: -5px;
+  padding: 44px 25px 0 25px;
+}
+
+header nav ul li a:hover {
+  border-top: 2px solid var(--colorOne);
+  color: var(--colorOne);
+  font-weight: 500;
+}
+
+/*header -e */
+
+/*baseline -s*/
+h1 + p {
+  margin-top: 8px;
+}
+/*baseline -e*/
+
+/*search-bar -s*/
+#search-bar {
+  display: flex;
+  margin-top: 20px;
+}
+
+#search-bar * {
+  height: 50px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+#location {
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  border-radius: 15px 0 0 15px;
+}
+
+#location i {
+  padding: 0;
+  height: fit-content;
+}
+
+#field-search {
+  border-top: 2px solid var(--background);
+  border-bottom: 2px solid var(--background);
+}
+
+#cta-search {
+  background-color: var(--colorOne);
+  border-radius: 0 15px 15px 0;
+  color: white;
+}
+/*search-bar -e*/
+
+/*filtres -s*/
+#filtres {
+  margin: 40px 0;
+}
+
+#filtres fieldset {
+  display: flex;
+  gap: 22px;
+}
+
+#filtres i {
+  color: var(--colorOne);
+  padding-right: 10px;
+}
+
+.legend {
+  float: left;
+  align-self: center;
+}
+
+.filtre {
+  border: 2px solid var(--background);
+  border-radius: 25px;
+  padding: 12.5px 0px;
+  padding-left: 13px;
+}
+
+.filtre:hover {
+  background-color: var(--hover);
+}
+
+.filtre input[type="checkbox"] {
+  visibility: hidden;
+}
+*/
+/*filtres -e*/
+
+#Hébergements {
+  background-color: var(--background);
+}
+
+#Populaires {
+  background-color: var(--background);
+}
+
+/*footer -s*/
+footer {
+  background-color: var(--background);
+}
+/*footer -e*/
