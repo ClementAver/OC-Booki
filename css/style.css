@@ -399,7 +399,7 @@ h1 + p {
   gap: 30px;
 
   background-color: var(--background);
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 40px;
 }
 
@@ -450,6 +450,11 @@ h1 + p {
 /*contrôle les textes des tuiles de la sous-section*/
 .HL-tiles > * {
   padding: 2.5px 15px;
+}
+
+.HL-tiles > p {
+  font-size: 14px;
+  line-height: 16.8px;
 }
 
 /*définit le style du bouton "Afficher plus"*/
@@ -510,6 +515,7 @@ h1 + p {
 /*contrôle les images des tuiles de la section*/
 .HP-tiles > :first-child {
   width: 40%;
+  flex-shrink: 0;
   border-radius: 15px 0 0 15px;
 
   object-fit: cover;
@@ -518,17 +524,22 @@ h1 + p {
 
 /*contrôle les divs englobant les textes des tuiles*/
 .HP-tiles > :nth-child(2) {
-  padding: 15px 10px;
+  padding: 15px 10px 5px 10px;
 
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-items: flex-start;
+  gap: 5px;
 }
 
 /*contrôle les paragraphes des tuiles*/
 .HP-tiles div p {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 15.26px;
+}
+
+.HP-tiles div div {
+  margin-top: auto;
 }
 
 /*-_-_-| ACTIVITES |-_-_-*/
@@ -600,7 +611,7 @@ footer ul li {
 }
 
 /*-_-_-| INTERACTION TUILES |-_-_-*/
-@media (min-width: 1400px) {
+@media (min-width: 992px) {
   .HL-tiles:hover {
     transform: scale(1.05);
   }
@@ -618,16 +629,30 @@ footer ul li {
     flex-flow: row wrap;
   }
 
+  .HL-tiles > p {
+    font-size: 13px;
+    line-height: 15.6px;
+  }
+
+  #Hebergements-populaires {
+    width: 100%;
+  }
+
   #Hebergements-populaires > :nth-child(2) {
     display: flex;
     flex-flow: row nowrap;
     gap: 30px;
-    max-width: 100vw;
+    width: 100%;
   }
 
   .containers-HP-tiles {
     flex: 1 1 auto;
     width: 30%;
+  }
+
+  .HP-tiles > :first-child {
+    min-width: 40%;
+    flex-basis: 0;
   }
 
   /*__________*/
@@ -693,7 +718,6 @@ footer ul li {
     display: none;
   }
 
-  /*bouton de soumission - loupe*/
   #cta-search-zoom {
     background-color: var(--colorOne);
     border-radius: 0 15px 15px 0;
@@ -765,6 +789,8 @@ footer ul li {
   .Ac-tiles {
     height: 200px;
   }
+
+  /*__________*/
 
   footer {
     height: fit-content;
