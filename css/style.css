@@ -260,7 +260,7 @@ h1 + p {
   border-bottom: 2px solid var(--background);
 }
 
-/*bouton de soumission*/
+/*bouton de soumission - rechercher*/
 #cta-search {
   color: white;
 
@@ -268,6 +268,19 @@ h1 + p {
   border-radius: 0 15px 15px 0;
 
   cursor: pointer;
+}
+
+/*bouton de soumission - loupe*/
+#cta-search-zoom {
+  background-color: var(--colorOne);
+  border-radius: 0 15px 15px 0;
+
+  cursor: pointer;
+  display: none;
+}
+
+#cta-search-zoom i {
+  color: white;
 }
 
 /*-_-_- FILTRES -_-_-*/
@@ -470,7 +483,6 @@ h1 + p {
   display: flex;
   flex-flow: column nowrap;
   gap: 30px;
-  border: 1px solid pink;
 }
 
 /*leur utilité est sémantique,
@@ -497,7 +509,7 @@ h1 + p {
 
 /*contrôle les images des tuiles de la section*/
 .HP-tiles > :first-child {
-  min-width: 40%;
+  width: 40%;
   border-radius: 15px 0 0 15px;
 
   object-fit: cover;
@@ -587,7 +599,7 @@ footer ul li {
   padding-bottom: 10px;
 }
 
-/*-_-_- INTERACTION TUILES -_-_-*/
+/*-_-_-| INTERACTION TUILES |-_-_-*/
 @media (min-width: 1400px) {
   .HL-tiles:hover {
     transform: scale(1.05);
@@ -600,7 +612,7 @@ footer ul li {
   }
 }
 
-/*-_-_- TABLETTE -_-_-*/
+/*-_-_-| TABLETTE |-_-_-*/
 @media (max-width: 991px) {
   #Hebergements {
     flex-flow: row wrap;
@@ -633,7 +645,7 @@ footer ul li {
   }
 }
 
-/*-_-_- MOBILE -_-_-*/
+/*-_-_-| MOBILE |-_-_-*/
 @media (max-width: 767px) {
   body {
     padding: 0;
@@ -677,10 +689,29 @@ footer ul li {
     width: 100%;
   }
 
+  #cta-search {
+    display: none;
+  }
+
+  /*bouton de soumission - loupe*/
+  #cta-search-zoom {
+    background-color: var(--colorOne);
+    border-radius: 0 15px 15px 0;
+
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  #cta-search-zoom i {
+    color: white;
+  }
+
   .filtre {
     font-size: 14px;
     line-height: 16.8px;
   }
+
+  /*__________*/
 
   #Hebergements-list {
     background-color: unset;
@@ -695,6 +726,8 @@ footer ul li {
     display: none;
   }
 
+  /*__________*/
+
   #Hebergements-populaires {
     padding: 40px 20px;
 
@@ -702,7 +735,6 @@ footer ul li {
     order: -1;
   }
 
-  /*contrôle la div englobant les articles (tuiles)*/
   #Hebergements-populaires > :nth-child(2) {
     display: flex;
     flex-flow: column nowrap;
@@ -710,13 +742,12 @@ footer ul li {
     width: 100%;
   }
 
-  /*leur utilité est sémantique,
-  on transvase ces proprités qui devraient être appliquée aux liens
-  au-dessus pour pouvoir les rendre effectives.*/
   .containers-HP-tiles {
     flex: 1 1 auto;
     width: 100%;
   }
+
+  /*__________*/
 
   #Activites {
     flex-flow: column nowrap;
@@ -729,6 +760,10 @@ footer ul li {
 
   #Activites article {
     width: 100%;
+  }
+
+  .Ac-tiles {
+    height: 200px;
   }
 
   footer {
