@@ -11,116 +11,13 @@
   --filtre: #d9d9d9;
 }
 
-/*| reset -start |*/
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-button,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-input,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  box-sizing: border-box;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19.2px;
-  list-style-type: none;
-  text-decoration: none;
-  color: black;
-  font-family: raleway, sans-serif;
-  background-color: unset;
-}
-/*| reset -end |*/
-
 /*-_-_-| STYLES GLOBAUX |-_-_-*/
 body {
+  font-family: raleway, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+
   max-width: 1400px;
   padding: 0 30px;
   margin: 0 auto;
@@ -130,7 +27,6 @@ h1,
 h2 {
   font-size: 22px;
   font-weight: 700;
-  line-height: 26.4px;
   width: 100%;
   margin-bottom: 30px;
 }
@@ -138,7 +34,6 @@ h2 {
 h3 {
   font-size: 16px;
   font-weight: 700;
-  line-height: 19.2px;
 }
 
 a {
@@ -163,16 +58,14 @@ a {
   color: black; /*<-*/
 }
 
-.fS-17 {
+.fs-17 {
   font-size: 17px;
   font-weight: 700;
-  line-height: 20.4px;
 }
 
-.fS-18 {
+.fs-18 {
   font-size: 18px;
   font-weight: 700;
-  line-height: 21.6px;
 }
 
 /*-_-_-| ENTÊTE |-_-_-*/
@@ -191,15 +84,16 @@ header {
 #logo {
   width: 60px;
   object-fit: contain;
+  cursor: pointer;
 }
 
 /*conteneur du menu d'entête*/
-header nav ul {
+header ul {
   display: flex;
 }
 
 /*entrées du menu d'entête*/
-header nav ul li {
+header li {
   display: flex;
   align-items: flex-end;
 
@@ -209,7 +103,7 @@ header nav ul li {
   border-top: 2px solid rgba(0, 0, 0, 0);
 }
 
-header nav ul li:hover {
+header li:hover {
   font-weight: 500;
   color: var(--colorOne);
 
@@ -355,7 +249,7 @@ h1 + p {
 
 /*-_-_-| HEBERGEMENTS |-_-_-*/
 /*conteneur principal des deux sous-sections*/
-#Hebergements {
+#hebergements {
   display: flex;
   flex-flow: row nowrap;
   gap: 40px;
@@ -364,7 +258,7 @@ h1 + p {
 }
 
 /*définit les styles des titres des deux sous-sections "Hébergements"*/
-.H-titles {
+.h-titles {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -373,7 +267,7 @@ h1 + p {
   margin-bottom: 0;
 }
 
-.H-titles i {
+.h-titles i {
   color: var(--colorOne);
 }
 
@@ -386,12 +280,17 @@ h1 + p {
 /*définit le style des étoiles*/
 .star {
   font-size: 75%;
+  color: var(--colorOne);
+}
+
+.star:last-child {
+  font-size: 75%;
   color: var(--background);
 }
 
 /*__________Hébergements à ...__________*/
 /* conteneur principal de la sous-section*/
-#Hebergements-list {
+#hebergements-list {
   flex: 2 auto 880px;
   display: flex;
   flex-flow: column nowrap;
@@ -404,7 +303,7 @@ h1 + p {
 }
 
 /*contrôle la div englobant les articles (tuiles)*/
-#Hebergements-list > :nth-child(2) {
+#hebergements-list > :nth-child(2) {
   display: flex;
   flex-flow: row wrap;
 
@@ -416,12 +315,12 @@ h1 + p {
 /*leur utilité est sémantique,
   on transvase ces proprités qui devraient être appliquée aux liens
   au-dessus pour pouvoir les rendre effectives.*/
-.containers-HL-tiles {
+.containers-hl-tiles {
   flex: 1 1 240px;
 }
 
 /*contrôle les tuiles de la sous-section "Hébergements à ..."*/
-.HL-tiles {
+.hl-tiles {
   display: flex;
   flex-flow: column nowrap;
 
@@ -436,7 +335,7 @@ h1 + p {
 }
 
 /*contrôle les images des tuiles de la sous-section*/
-.HL-tiles > :first-child {
+.hl-tiles > :first-child {
   width: 100%;
   height: 125px;
 
@@ -448,17 +347,16 @@ h1 + p {
 }
 
 /*contrôle les textes des tuiles de la sous-section*/
-.HL-tiles > * {
+.hl-tiles > * {
   padding: 2.5px 15px;
 }
 
-.HL-tiles > p {
+.hl-tiles > p {
   font-size: 14px;
-  line-height: 16.8px;
 }
 
 /*définit le style du bouton "Afficher plus"*/
-#HL-button {
+#hl-button {
   text-align: left;
   cursor: pointer;
 
@@ -466,8 +364,8 @@ h1 + p {
 }
 
 /*__________Les plus populaires__________*/
-/* conteneur principal de la sous-section*/
-#Hebergements-populaires {
+/* conteneur principal de l'à côté*/
+#hebergements-populaires {
   flex: 1 0 420px;
 
   display: flex;
@@ -484,7 +382,7 @@ h1 + p {
 }
 
 /*contrôle la div englobant les articles (tuiles)*/
-#Hebergements-populaires > :nth-child(2) {
+#hebergements-populaires > :nth-child(2) {
   display: flex;
   flex-flow: column nowrap;
   gap: 30px;
@@ -493,12 +391,12 @@ h1 + p {
 /*leur utilité est sémantique,
   on transvase ces proprités qui devraient être appliquée aux liens
   au-dessus pour pouvoir les rendre effectives.*/
-.containers-HP-tiles {
+.containers-hp-tiles {
   flex: 1 1 auto;
 }
 
-/*contrôle les tuiles de la sous-section "Les plus populaires"*/
-.HP-tiles {
+/*contrôle les tuiles de l'à côté "Les plus populaires"*/
+.hp-tiles {
   display: flex;
   flex-flow: row nowrap;
   height: 150px;
@@ -512,8 +410,8 @@ h1 + p {
   transition: transform 0.3s ease-in-out;
 }
 
-/*contrôle les images des tuiles de la section*/
-.HP-tiles > :first-child {
+/*contrôle les images des tuiles de l'à côté*/
+.hp-tiles > :first-child {
   width: 40%;
   flex-shrink: 0;
   border-radius: 15px 0 0 15px;
@@ -523,7 +421,7 @@ h1 + p {
 }
 
 /*contrôle les divs englobant les textes des tuiles*/
-.HP-tiles > :nth-child(2) {
+.hp-tiles > :nth-child(2) {
   padding: 15px 10px 5px 10px;
 
   display: flex;
@@ -533,18 +431,17 @@ h1 + p {
 }
 
 /*contrôle les paragraphes des tuiles*/
-.HP-tiles div p {
+.hp-tiles div p {
   font-size: 14px;
-  line-height: 15.26px;
 }
 
-.HP-tiles div div {
+.hp-tiles div div {
   margin-top: auto;
 }
 
 /*-_-_-| ACTIVITES |-_-_-*/
 /*conteneur principal*/
-#Activites {
+#activites {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -553,12 +450,12 @@ h1 + p {
 }
 
 /*mesures des articles sémantique*/
-#Activites article {
+#activites article {
   width: 22.5%;
 }
 
 /*tuiles de la section*/
-.Ac-tiles {
+.ac-tiles {
   height: 445px;
 
   display: flex;
@@ -573,14 +470,14 @@ h1 + p {
 }
 
 /*style des photos de la section "Activités à ..."*/
-.Ac-tiles > :first-child {
+.ac-tiles > :first-child {
   height: 88%;
   border-radius: 15px 15px 0 0;
 
   object-fit: cover;
 }
 
-.Ac-tiles h3 {
+.ac-tiles h3 {
   display: flex;
   height: 12%;
   align-items: center;
@@ -612,60 +509,65 @@ footer ul li {
 
 /*-_-_-| INTERACTION TUILES |-_-_-*/
 @media (min-width: 992px) {
-  .HL-tiles:hover {
+  .hl-tiles:hover {
     transform: scale(1.05);
   }
-  .HP-tiles:hover {
+  .hp-tiles:hover {
     transform: scale(1.05);
   }
-  .Ac-tiles:hover {
+  .ac-tiles:hover {
     transform: scale(1.05);
   }
 }
 
 /*-_-_-| TABLETTE |-_-_-*/
 @media (max-width: 991px) {
-  #Hebergements {
+  #hebergements {
     flex-flow: row wrap;
   }
 
-  .HL-tiles > p {
-    font-size: 13px;
-    line-height: 15.6px;
-  }
-
-  #Hebergements-populaires {
+  #hebergements-populaires {
     width: 100%;
   }
 
-  #Hebergements-populaires > :nth-child(2) {
+  #hebergements-populaires > :nth-child(2) {
     display: flex;
     flex-flow: row nowrap;
     gap: 30px;
     width: 100%;
   }
 
-  .containers-HP-tiles {
+  .containers-hp-tiles {
     flex: 1 1 auto;
     width: 30%;
   }
 
-  .HP-tiles > :first-child {
+  .hp-tiles div h3 {
+    font-size: 14px;
+    line-height: 1.1;
+  }
+
+  .hp-tiles div p {
+    font-size: 13px;
+    line-height: 1.1;
+  }
+
+  .hp-tiles > :first-child {
     min-width: 40%;
     flex-basis: 0;
   }
 
   /*__________*/
 
-  .Ac-tiles {
+  .ac-tiles {
     height: 265px;
   }
 
-  .Ac-tiles > :first-child {
+  .ac-tiles > :first-child {
     height: 80%;
   }
 
-  .Ac-tiles > :nth-child(2) {
+  .ac-tiles > :nth-child(2) {
     height: 20%;
   }
 }
@@ -685,7 +587,7 @@ footer ul li {
     margin-bottom: 70px;
   }
 
-  .padding-X-mobile {
+  .padding-x-mobile {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -694,7 +596,7 @@ footer ul li {
     margin-top: 20px;
   }
 
-  header nav ul li {
+  header li {
     align-items: flex-start;
     justify-content: center;
 
@@ -705,7 +607,7 @@ footer ul li {
     border-bottom: 2px solid var(--background);
   }
 
-  header nav ul li:hover {
+  header li:hover {
     border-top: unset;
     border-bottom: 2px solid var(--colorOne);
   }
@@ -732,61 +634,68 @@ footer ul li {
 
   .filtre {
     font-size: 14px;
-    line-height: 16.8px;
   }
 
   /*__________*/
 
-  #Hebergements-list {
+  #hebergements-list {
     background-color: unset;
     padding: 20px;
   }
 
-  .containers-HL-tiles {
+  .containers-hl-tiles {
     flex: 1 1 100%;
   }
 
-  #HL-button {
+  #hl-button {
     display: none;
   }
 
   /*__________*/
 
-  #Hebergements-populaires {
+  #hebergements-populaires {
     padding: 40px 20px;
 
     border-radius: 0px;
     order: -1;
   }
 
-  #Hebergements-populaires > :nth-child(2) {
+  #hebergements-populaires > :nth-child(2) {
     display: flex;
     flex-flow: column nowrap;
     gap: 30px;
     width: 100%;
   }
 
-  .containers-HP-tiles {
+  .containers-hp-tiles {
     flex: 1 1 auto;
     width: 100%;
   }
 
+  .hp-tiles div h3 {
+    font-size: 16px;
+  }
+
+  .hp-tiles div p {
+    font-size: 14px;
+  }
+
   /*__________*/
 
-  #Activites {
+  #activites {
     flex-flow: column nowrap;
     gap: 30px;
   }
 
-  #Activites :first-child {
+  #activites :first-child {
     margin-bottom: 0;
   }
 
-  #Activites article {
+  #activites article {
     width: 100%;
   }
 
-  .Ac-tiles {
+  .ac-tiles {
     height: 200px;
   }
 
@@ -802,8 +711,11 @@ footer ul li {
     padding: 25px;
     gap: 30px;
   }
-
-  footer > * {
+  footer nav {
     width: 100%;
+  }
+
+  footer nav h2 {
+    margin-bottom: 0px;
   }
 }
