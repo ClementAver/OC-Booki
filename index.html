@@ -15,7 +15,7 @@
   <body>
     <!-- header -->
     <header>
-      <img src="./assets/Images Booki/logo/Booki.png" alt="logo" id="logo" />
+      <a href="./index.html"><img src="./assets/Images_Booki/logo/Booki.png" alt="logo de booki" class="logo" /></a>
       <nav>
         <ul>
           <li><a href="#hebergements">Hébergements</a></li>
@@ -26,45 +26,45 @@
 
     <main>
       <!-- Trouvez votre hébergement -->
-      <section id="trouvez" class="padding-x-mobile">
+      <section class="padding-x-mobile">
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre-ville ou en pleine nature</p>
 
         <!-- Barre de recherche -->
-        <form action="#" method="post" id="search-bar">
-          <div id="location"><i class="fa-solid fa-location-dot"></i></div>
-          <input class="fs-18" id="field-search" type="text" name="location" placeholder="Marseille, France" />
-          <input class="fs-18" id="cta-search" type="submit" value="Rechercher" />
-          <button id="cta-search-zoom" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <form action="#" method="post" class="search-bar">
+          <div class="location"><i class="fa-solid fa-location-dot"></i></div>
+          <input class="fs-18 field-search" type="text" name="location" placeholder="Marseille, France" />
+          <input class="fs-18 cta-search" type="submit" value="Rechercher" />
+          <button class="cta-search-zoom" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
 
         <!-- Filtres de recherche -->
-        <form action="#" method="post" id="filtres">
+        <form action="#" method="post" class="filtres">
           <fieldset>
             <legend class="legend fs-18">Filtres</legend>
-            <label class="filtre fs-17"><i class="fa-solid fa-money-bill-wave"></i>Économique<input type="checkbox" name="eco" /></label>
-            <label class="filtre fs-17"><i class="fa-solid fa-person"></i>Familial<input type="checkbox" name="family" /></label>
-            <label class="filtre fs-17"><i class="fa-solid fa-heart"></i>Romantique<input type="checkbox" name="romantic" /></label>
-            <label class="filtre fs-17"><i class="fa-solid fa-dog"></i>Animaux autorisés<input type="checkbox" name="pets" /></label>
+            <label class="filtre"><i class="fa-solid fa-money-bill-wave"></i>Économique<input type="checkbox" name="eco" /></label>
+            <label class="filtre"><i class="fa-solid fa-person"></i>Familial<input type="checkbox" name="family" /></label>
+            <label class="filtre"><i class="fa-solid fa-heart"></i>Romantique<input type="checkbox" name="romantic" /></label>
+            <label class="filtre"><i class="fa-solid fa-dog"></i>Animaux autorisés<input type="checkbox" name="pets" /></label>
           </fieldset>
         </form>
 
         <!-- Info -->
-        <p id="container-info">
-          <span id="container-picto-info"><i class="fa-solid fa-info" id="picto-info"></i></span> Plus de 500 logements disponibles dans cette ville
+        <p class="container-info">
+          <span class="container-picto-info"><i class="fa-solid fa-info picto-info"></i></span> Plus de 500 logements disponibles dans cette ville
         </p>
       </section>
 
       <!-- Hébergements -->
-      <section id="hebergements">
+      <section class="hebergements" id="hebergements">
         <!-- Hébergements Localisés -->
-        <section id="hebergements-list">
+        <section class="hebergements-list">
           <h2 class="h-titles">Hébergements à Marseille</h2>
 
           <div>
             <article class="containers-hl-tiles">
               <a href="#" class="hl-tiles">
-                <img src="./assets/Images Booki/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="#" />
+                <img src="./assets/Images_Booki/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Chambre avec lits superposés." />
                 <h3>Auberge La Canebière</h3>
                 <p>Nuit à partir de 25€</p>
                 <div><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i></div>
@@ -73,7 +73,7 @@
 
             <article class="containers-hl-tiles">
               <a href="#" class="hl-tiles">
-                <img src="./assets/Images Booki/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="#" />
+                <img src="./assets/Images_Booki/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Chambre avec deux lits." />
                 <h3>Hôtel du port</h3>
                 <p>Nuit à partir de 52€</p>
                 <div><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i></div>
@@ -82,7 +82,7 @@
 
             <article class="containers-hl-tiles">
               <a href="#" class="hl-tiles">
-                <img src="./assets/Images Booki/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="#" />
+                <img src="./assets/Images_Booki/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Chambre haut de gamme avec moquette, moulures et dressing." />
                 <h3>Hôtel Les mouettes</h3>
                 <p>Nuit à partir de 76€</p>
                 <div><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i></div>
@@ -91,7 +91,7 @@
 
             <article class="containers-hl-tiles">
               <a href="#" class="hl-tiles">
-                <img src="./assets/Images Booki/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="#" />
+                <img src="./assets/Images_Booki/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Grande chambre lumineuse avec lit double." />
                 <h3>Hôtel de la mer</h3>
                 <p>Nuit à partir de 46€</p>
                 <div><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i></div>
@@ -100,7 +100,7 @@
 
             <article class="containers-hl-tiles">
               <a href="#" class="hl-tiles">
-                <img src="./assets/Images Booki/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="#" />
+                <img src="./assets/Images_Booki/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Dortoir composé de deux lits superposés, structure bois." />
                 <h3>Auberge Le Panier</h3>
                 <p>Nuit à partir de 23€</p>
                 <div><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i></div>
@@ -109,7 +109,7 @@
 
             <article class="containers-hl-tiles">
               <a href="#" class="hl-tiles">
-                <img src="./assets/Images Booki/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="#" />
+                <img src="./assets/Images_Booki/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Grande chambre lumineuse avec bureau, télévision et deux lits simples." />
                 <h3>Hôtel Chez Amina</h3>
                 <p>Nuit à partir de 96€</p>
                 <div><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i></div>
@@ -117,17 +117,17 @@
             </article>
           </div>
 
-          <button id="hl-button" class="fs-18">Afficher plus</button>
+          <button class="hl-button fs-18">Afficher plus</button>
         </section>
 
         <!-- Les plus populaires -->
-        <aside id="hebergements-populaires">
+        <aside class="hebergements-populaires">
           <h2 class="h-titles">Les plus populaires<i class="fa-solid fa-chart-line"></i></h2>
 
           <div>
             <article class="containers-hp-tiles">
               <a href="#" class="hp-tiles">
-                <img src="./assets/Images Booki/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="#" />
+                <img src="./assets/Images_Booki/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Chambre haut de gamme avec lit double." />
                 <div>
                   <h3>Hôtel Le soleil du matin</h3>
                   <p>Nuit à partir de 128€</p>
@@ -138,7 +138,7 @@
 
             <article class="containers-hp-tiles">
               <a href="#" class="hp-tiles">
-                <img src="./assets/Images Booki/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="#" />
+                <img src="./assets/Images_Booki/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Chambre spacieuse avec lit double." />
                 <div>
                   <h3>Chambres d'hôtes Au cœur de l'eau</h3>
                   <p>Nuit à partir de 71€</p>
@@ -149,7 +149,7 @@
 
             <article class="containers-hp-tiles">
               <a href="#" class="hp-tiles">
-                <img src="./assets/Images Booki/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="#" />
+                <img src="./assets/Images_Booki/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Chambre avec un lit double dont la tête faite de bois vernis occupe toute la largeur de la pièce." />
                 <div>
                   <h3>Hôtel Bleu et Blanc</h3>
                   <p>Nuit à partir de 68€</p>
@@ -162,33 +162,33 @@
       </section>
 
       <!-- Activités à Marseille -->
-      <section id="activites" class="padding-x-mobile">
+      <section class="activites padding-x-mobile" id="activites">
         <h2>Activités à Marseille</h2>
 
         <article>
           <a class="ac-tiles">
-            <img src="./assets/Images Booki/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="#" />
+            <img src="./assets/Images_Booki/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Bateaux amarrés dans le Vieux-Port au premier plan, immeubles et ciel en fond" />
             <h3>Vieux-Port</h3>
           </a>
         </article>
 
         <article>
           <a class="ac-tiles">
-            <img src="./assets/Images Booki/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="#" />
+            <img src="./assets/Images_Booki/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Sol rocailleux ouvrant sur le Fort Pomègues et le ciel." />
             <h3>Fort Pomègues</h3>
           </a>
         </article>
 
         <article>
           <a class="ac-tiles">
-            <img src="./assets/Images Booki/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="#" />
+            <img src="./assets/Images_Booki/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Falaises des Calanques donnant sur la mer méditerranée" />
             <h3>Parc national des Calanques</h3>
           </a>
         </article>
 
         <article>
           <a class="ac-tiles">
-            <img src="./assets/Images Booki/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="#" />
+            <img src="./assets/Images_Booki/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Basilique Notre-Dame-de-la-Garde surplombant la ville." />
             <h3>Notre-Dame-de-la-Garde</h3>
           </a>
         </article>
