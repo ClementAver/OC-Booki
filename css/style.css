@@ -235,7 +235,7 @@ header li:hover {
   height: 24px;
   width: 24px;
 
-  display: inline-flex;
+  display: flex;
   flex-shrink: 0;
 
   justify-content: center;
@@ -275,6 +275,14 @@ header li:hover {
   color: var(--colorOne);
 }
 
+/*contrôle les deux divs englobant les articles (tuiles)*/
+.container-tiles {
+  display: flex;
+  flex-flow: row wrap;
+
+  gap: 30px;
+}
+
 /*contrôle les divisions englobant les étoiles*/
 .stars {
   display: flex;
@@ -295,7 +303,7 @@ header li:hover {
 /*__________Hébergements à ...__________*/
 /* conteneur principal de la sous-section*/
 .hebergements-list {
-  flex: 2 1 880px;
+  flex: 2 1;
   display: flex;
   flex-flow: column nowrap;
 
@@ -304,16 +312,6 @@ header li:hover {
   background-color: var(--background);
   border-radius: 20px;
   padding: 40px;
-}
-
-/*contrôle la div englobant les articles (tuiles)*/
-.hebergements-list > :nth-child(2) {
-  display: flex;
-  flex-flow: row wrap;
-
-  width: 100%;
-
-  gap: 30px;
 }
 
 /*leur utilité est sémantique,
@@ -370,7 +368,7 @@ header li:hover {
 /*__________Les plus populaires__________*/
 /* conteneur principal de l'à côté*/
 .hebergements-populaires {
-  flex: 1 0 420px;
+  flex-basis: 420px;
 
   display: flex;
   flex-flow: row wrap;
@@ -386,13 +384,6 @@ header li:hover {
 
   background-color: var(--background);
   border-radius: 20px;
-}
-
-/*contrôle la div englobant les articles (tuiles)*/
-.hebergements-populaires > :nth-child(2) {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 30px;
 }
 
 /*leur utilité est sémantique,
@@ -515,7 +506,7 @@ footer ul li {
 }
 
 /*-_-_-| INTERACTION TUILES |-_-_-*/
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .hl-tiles:hover {
     transform: scale(1.05);
   }
@@ -528,7 +519,7 @@ footer ul li {
 }
 
 /*-_-_-| TABLETTE |-_-_-*/
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   /*
   .filtre:hover {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -540,19 +531,14 @@ footer ul li {
   }
 
   .hebergements-populaires {
-    flex: 1 0 auto;
-    width: 100%;
+    flex-basis: auto;
   }
 
   .hebergements-populaires > :nth-child(2) {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 30px;
-    width: 100%;
+    flex-wrap: nowrap;
   }
 
   .containers-hp-tiles {
-    flex: 1 1 auto;
     width: 30%;
   }
 
@@ -564,11 +550,6 @@ footer ul li {
   .hp-tiles div p {
     font-size: 13px;
     line-height: 1.1;
-  }
-
-  .hp-tiles > :first-child {
-    min-width: 40%;
-    flex-basis: 0;
   }
 
   /*__________*/
@@ -587,7 +568,7 @@ footer ul li {
 }
 
 /*-_-_-| MOBILE |-_-_-*/
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   body {
     padding: 0;
   }
@@ -626,10 +607,6 @@ footer ul li {
     border-bottom: 2px solid var(--colorOne);
   }
 
-  .legend {
-    width: 100%;
-  }
-
   .cta-search {
     display: none;
   }
@@ -644,6 +621,10 @@ footer ul li {
 
   .cta-search-zoom i {
     color: white;
+  }
+
+  .legend {
+    width: 100%;
   }
 
   .filtre {
@@ -679,15 +660,11 @@ footer ul li {
   }
 
   .hebergements-populaires > :nth-child(2) {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 30px;
-    width: 100%;
+    flex-wrap: wrap;
   }
 
   .containers-hp-tiles {
-    flex: 1 1 auto;
-    width: 100%;
+    width: unset;
   }
 
   .hp-tiles div h3 {
@@ -722,13 +699,12 @@ footer ul li {
   footer {
     height: fit-content;
 
-    display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
 
     padding: 25px;
     gap: 30px;
   }
+
   footer nav {
     width: 100%;
   }
