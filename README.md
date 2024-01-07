@@ -1,8 +1,3 @@
-
-<p align="center">
-<img src="images/README/Booki_sticker.png" alt="Mockup of the project's logo" width="600"/>
-</p>
-
 # Booki
 
 <div>
